@@ -26,3 +26,15 @@ describe("App", () => {
         expect(counter).toBe("1");
     })
 })
+
+describe("Mock server", () => {
+    it('responds with the user', async () => {
+        const response = await fetch('https://api.exemple.com/user')
+        
+        await expect(response.json()).resolves.toEqual({
+            id: 'abc-123',
+            firstName: 'John',
+            lastName: 'Maverick',
+        })
+    })
+})
