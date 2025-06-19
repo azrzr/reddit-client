@@ -2,13 +2,16 @@ nav {
 
     position: fixed;
     top: 0px;
+    z-index: 2;
 
     display: grid;
     grid-template-columns: 25% auto;
 
-    height: 4em;
+    height: 5em;
     width: 100%;
-    border-bottom: 1px grey solid;
+
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
 }
 
 .page-ident {
@@ -24,6 +27,7 @@ nav {
 
 .page-title {
     font-family:'Source Sans 3';
+    color: black;
     font-size: 1.6em;
 }
 
@@ -51,7 +55,7 @@ nav {
     padding: 0px 10px;
 
     width: 50%;
-    height: 2.8em;
+    height: 3em;
 
     border: 1.5px grey solid;
     border-radius: 10px;
@@ -60,16 +64,21 @@ nav {
 }
 
 #search-input:focus {
-    border: 2px blue solid;
+    outline: 2px blue solid;
 }
 
 .search-btn {
-    width: 2.8em;
+    width: 3em;
     border-radius: 100%;
 
     border: 1.5px blue solid;
     background-color: blue;
     color: white;
+}
+
+.search-btn svg {
+    width: 16px;
+    height: 16px;
 }
 
 @media screen and (max-width:900px) {
@@ -78,15 +87,14 @@ nav {
     position: fixed;
     top: 0px;
 
-    padding: 1em;
+    padding: 0.5em;
 
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
 
-    height: 10em;
+    height: 6em;
     width: 100%;
-    border-bottom: 1px grey solid;
 }
 
 .page-ident {
@@ -100,6 +108,21 @@ nav {
 
 }
 
+#search-input {
+    height: 2em;
+}
 
+#search-input:focus {
+    outline: 1px blue solid;
+}
+
+.search-btn {
+    width: 2em;
+}
+
+.search-btn svg {
+    width: 12px;
+    height: 12px;
+}
 
 }
