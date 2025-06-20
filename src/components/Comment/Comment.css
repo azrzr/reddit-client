@@ -1,0 +1,20 @@
+.comment-container {
+    border-bottom: 1px grey solid;
+    padding-bottom: 0.5em;
+}
+
+.comment-container:last-child {
+    border-bottom: 0;
+    padding-bottom: 0.5em;
+}
+
+.comment-firstline {
+    margin: 0.5em auto;
+    margin-top: 1em;
+    font-style: italic;
+}
+
+.comment-content {
+    font-size: 0.9em;
+    overflow: hidden;
+}

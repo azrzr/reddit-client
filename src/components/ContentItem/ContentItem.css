@@ -1,0 +1,111 @@
+.content-item-container {
+    width: 75%;
+    margin: 1.5em auto;
+    padding: 2em;
+    
+    border: 2px blue solid;
+    border-radius: 5px;
+}
+
+.content-item-container:first-child {
+    margin-top: 0;
+}
+
+.content-item-firstline {
+    display: flex;
+    align-items: center;
+    margin: 1.2em auto;
+    margin-top: 0;
+}
+
+.content-item-logo {
+    height: 20px;
+    width: 20px;
+}
+
+.dot {
+    margin: 0 1em;
+}
+
+.content-item-title {
+    margin: 1.2em auto;
+}
+
+.content-item-title h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.content-item-bottomline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 1.2em auto
+}
+
+.content-item-vote {
+    display: flex;
+    align-items: center;
+}
+
+.content-item-votebutton {
+
+    padding: 0.5em;
+    border: 2px blue solid;
+    border-radius: 5px;
+}
+
+.content-item-votebutton:hover {
+
+    background-color: rgba(0, 0, 255, 0.1);
+    cursor: pointer;
+
+}
+
+.content-item-votebutton.active {
+        background-color: blue;
+        color: white;
+}
+
+.content-item-vote-score {
+    margin: 0 1em;
+}
+
+.content-item-comment-btn {
+
+    display: flex;
+    align-items: center;
+
+    padding: 0.6em;
+    border: 2px blue solid;
+    border-radius: 5px;
+}
+
+.content-item-comment-btn svg {
+
+    margin-right: 1em;
+}
+
+.content-item-comment-btn:hover {
+
+    background-color: rgba(0, 0, 255, 0.1);
+    cursor: pointer;
+}
+
+.content-item-comment-btn.active {
+        background-color: blue;
+        color: white;
+}
+
+.content-item-comments-section {
+    background-color: rgba(0, 0, 255, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.content-item-comments-section-header  {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}

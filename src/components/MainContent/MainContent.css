@@ -1,5 +1,5 @@
 .maincontent-container {
-
+    
     z-index: 2;
 
     grid-column: 2 / span 1;
@@ -7,11 +7,35 @@
     padding: 1.2em;
 }
 
+.subreddit-title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.subreddit-r {
+    color: blue;
+    font-weight: 700;
+}
+
+.subreddit-title {
+    margin-bottom: 0.5em;
+}
+
 @media screen and (max-width:900px) {
 
     .maincontent-container {
 
         grid-column: 1 / span 1;
-        grid-row: 2 / span 1;    }
+        grid-row: 2 / span 1;
+    }
+
+    .subreddit-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    }
 
 }

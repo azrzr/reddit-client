@@ -29,7 +29,7 @@ const Sidebar = () => {
               </svg>
             </div>
             {sidebarToggle === 1 ?
-            <div className="dropdown-list ${}">
+            <div className="dropdown-list">
               <ul>
                   <li><Subreddit subreddit={"r/bootstrap"} /></li>
                   <li><Subreddit subreddit={"r/javascript"} /></li>

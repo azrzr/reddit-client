@@ -16,7 +16,7 @@
     .container {
         top: 6em;
 
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: auto auto ;
         grid-template-columns: 1fr;
     }
 
