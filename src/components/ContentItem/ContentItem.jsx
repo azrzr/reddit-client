@@ -9,17 +9,11 @@ const ContentItem = () => {
 
   const voteHandler = (vote) => {
     if(voteToggle === 0) {
-
       vote === 1 ? setVoteToggle(1) : setVoteToggle(-1)
-
     } else if (voteToggle === 1) {
-
       vote === 1 ? setVoteToggle(0) : setVoteToggle(-1)
-
     } else if (voteToggle === -1) {
-
       vote === 1 ? setVoteToggle(1) : setVoteToggle(0)
-
     }
   }
 

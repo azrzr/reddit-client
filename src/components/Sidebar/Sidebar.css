@@ -11,12 +11,35 @@
     justify-content: center;
     align-items: center;
 
-    margin: 1em auto;
+    margin-bottom: 1em;
 
     height: 3em;
     
     border: 2px blue solid;
     border-radius: 5px;
+}
+
+.sidebar-shape li a {
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 3em;
+
+    color: black;
+    text-decoration: none;
+
+    border-radius: 5px;
+
+}
+
+.sidebar-shape li a.active {
+
+    color: white;
+    background-color: blue;
+
 }
 
 .sidebar-shape li:hover {
@@ -27,6 +50,7 @@
 
 .sidebar-shape li:first-child {
     margin: 0 auto;
+    margin-bottom: 1em;
 }
 
 .sidebar-dropdown {
@@ -54,7 +78,7 @@
         grid-row: 1 / span 1;
     }
 
-.sidebar-dropdown li {
+.sidebar-dropdown a {
 
     display: flex;
     justify-content: center;
@@ -66,6 +90,9 @@
     
     border: 1px blue solid;
     border-bottom: 0px;
+
+    color: black;
+    text-decoration: none;
 }
 
 .sidebar-dropdown li:hover {
