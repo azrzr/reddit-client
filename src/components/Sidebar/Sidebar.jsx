@@ -44,7 +44,7 @@ const Sidebar = () => {
           <div className="dropdown-list">
             <ul>
               {subreddits.map((subreddit, index) => (
-                <Subreddit key={index} subreddit={subreddit.name} />
+                <Subreddit key={index} subreddit={subreddit.name} num={index} />
               ))}
             </ul>
           </div>

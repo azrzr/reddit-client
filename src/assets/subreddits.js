@@ -1,9 +1,5 @@
 export const subreddits = [
   {
-    name: "bootstrap",
-    url: "r/bootstrap",
-  },
-  {
     name: "javascript",
     url: "r/javascript",
   },

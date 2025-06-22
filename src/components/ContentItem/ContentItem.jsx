@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./ContentItem.css";
 import Comment from "../Comment/Comment";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import TimeAgo from "react-timeago";
+import { fetchComments } from "../../features/threadsSlice";
 import Markdown from "react-markdown";
 
 const ContentItem = ({ index }) => {
@@ -10,6 +11,7 @@ const ContentItem = ({ index }) => {
   const [voteToggle, setVoteToggle] = useState(0);
 
   const threadsState = useSelector((state) => state.threads.data);
+  const dispatch = useDispatch();
 
   const voteHandler = (vote) => {
     if (voteToggle === 0) {
@@ -37,11 +39,13 @@ const ContentItem = ({ index }) => {
 
       <div className="content-item-title">
         <h3 className="post-title">
-          <a href={`https://reddit.com/${threadsState[index].permalink}`}>
+          <a href={`https://reddit.com${threadsState[index].permalink}`}>
             {threadsState[index].title}
           </a>
         </h3>
-        <p className="post-text">{threadsState[index].selftext}</p>
+        <p className="post-text">
+          <Markdown>{threadsState[index].selftext}</Markdown>
+        </p>
       </div>
 
       <div className="content-item-bottomline">
@@ -96,6 +100,8 @@ const ContentItem = ({ index }) => {
           }`}
           onClick={() => {
             commentsToggle === 1 ? setCommentsToogle(0) : setCommentsToogle(1);
+            commentsToggle === 0 &&
+              dispatch(fetchComments(threadsState[index].permalink));
           }}
         >
           <svg
@@ -116,8 +122,15 @@ const ContentItem = ({ index }) => {
       {commentsToggle === 1 ? (
         <div className="content-item-comments-section">
           <h4 className="content-item-comments-section-header">Comments</h4>
-          <Comment />
-          <Comment />
+          {threadsState[index].comments.loading
+            ? "Loading comments... Please wait..."
+            : threadsState[index].comments.data.map((comment, commentIndex) => (
+                <Comment
+                  key={commentIndex}
+                  threadIndex={index}
+                  index={commentIndex}
+                />
+              ))}
         </div>
       ) : (
         ""

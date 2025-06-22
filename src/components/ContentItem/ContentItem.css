@@ -1,9 +1,7 @@
 .content-item-container {
-  max-width: 75%;
+  max-width: 80%;
   margin: 1.5em auto;
   padding: 2em;
-
-  overflow: scroll;
 
   border: 2px blue solid;
   border-radius: 5px;
@@ -19,6 +17,7 @@
   align-items: center;
   margin: 1.2em auto;
   margin-top: 0;
+  max-width: 100%;
 }
 
 .content-item-logo {
@@ -32,6 +31,8 @@
 
 .content-item-title {
   margin: 1.2em auto;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 .content-item-title h3 {
@@ -44,10 +45,16 @@
   text-decoration: none;
 }
 
+.content-item-title h3 a:hover {
+  text-decoration: underline;
+}
+
 .content-item-bottomline {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  max-width: 100%;
 
   margin: 1.2em auto;
 }
@@ -124,4 +131,13 @@
   max-width: 100%;
   hyphens: auto;
   break-inside: auto;
+}
+
+.post-text code {
+  max-width: 50%;
+  overflow-wrap: break-word;
+}
+
+.post-text pre {
+  max-width: 100%;
 }
