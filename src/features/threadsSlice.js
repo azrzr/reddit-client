@@ -59,6 +59,13 @@ export const fetchComments = createAsyncThunk(
 const threadsSlice = createSlice({
   name: "threads",
   initialState,
+  reducers: {
+    searchFilter(state, action) {
+      state.data = state.data.filter((thread) =>
+        thread.title.toLowerCase().includes(action.payload.toLowerCase())
+      );
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchThreads.pending, (state) => {
       state.loading = true;
@@ -129,3 +136,4 @@ const threadsSlice = createSlice({
 });
 
 export default threadsSlice.reducer;
+export const { searchFilter } = threadsSlice.actions;
